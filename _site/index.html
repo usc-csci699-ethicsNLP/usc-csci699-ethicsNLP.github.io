@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="USC CSCI 699: Ethics in NLP, Fall 2023.">
+    <meta name="author" content="Robin Jia">
+
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff"> -->
+
+    <title>CSCI 699: Ethics in NLP</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <!-- Custom styles for this page -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <div id="content">
+      <div id="header" class="title-section">
+        <div class="title">CSCI 699: Ethics in NLP</div>
+        <div class="subtitle">
+          Fall 2023, Tuesdays and Thursdays at 4:00-5:50pm in <a href=https://maps.usc.edu/?id=1928&reference=DMC target="_blank">DMC 150</a><br/>
+          
+          Instructor: Jieyu Zhao
+        </div>
+      </div>
+      <div class="row">
+  <!-- <div class="col-pic" markdown=1>
+![xkcd Tasks](https://imgs.xkcd.com/comics/tasks.png)
+Source: [xkcd](https://xkcd.com/1425/)
+</div> -->
+  <div class="col-intro">
+
+    <!-- **Quick Links:**
+* **[Final Project information](project)** -->
+
+    <p><strong>News:</strong></p>
+    <ul>
+      <li>First day of class is August 22!</li>
+    </ul>
+
+    <p>Although there have been impressive advancements in natural language processing (NLP), several studies reported that NLP models contain social biases. 
+Even worse, the models run the risk of further amplifying the stereotypes and causing harms to people. 
+As NLP technology continues to advance and be integrated into various domains such as healthcare, finance, marketing, and social media, it raises important ethical concerns that need to be addressed. 
+In this course, students will critically examine the ethical implications of NLP, including issues related to bias, fairness, privacy, transparency, accountability, and social impact. 
+Through discussions, case studies, and guest lectures, students will explore the ethical challenges associated with NLP and develop a deep understanding of the ethical considerations that arise when designing, implementing, and deploying NLP applications.</p>
+
+    <p>Students will get a broad understanding about possible issues in current NLP models and how current research has tried to alleviate those issues. 
+This class will equip students with the ability to read and write critical reviews about research papers. 
+At the same time, they will learn how to conduct research related to NLP fairness, interpretability and robustness.</p>
+
+  </div>
+</div>
+
+<h2 id="course-staff">Course Staff</h2>
+<div class="staff-photo">
+  <p><img src="/assets/images/jieyu.jpg" alt="Jieyu Zhao" /><br />
+<strong>Jieyu Zhao</strong><br />
+Instructor</p>
+</div>
+<div class="staff-photo">
+  <p><img src="/assets/images/pei.jpg" alt="Pei Zhou" /><br />
+<strong>Pei Zhou</strong><br />
+Teaching Assistant</p>
+</div>
+
+<h2 id="logistics">Logistics</h2>
+<ul>
+  <li><strong>Office hours</strong>: Jieyu: Wednesday 10-11 AM, PHE 332 or by Appointment.
+Pei: Monday 2-3 PM, RTH 313 or by Appointment.</li>
+  <li><strong>Assignments</strong>: Assignments should be submitted through <a href="">Google Drive</a>.</li>
+  <li><strong>Discussions</strong>: We will be using Slack for general course-related questions and announcements. 
+If you have an individual matter to discuss, email me directly (please put “CSCI 699” in the subject line) or come to my office hours.</li>
+</ul>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+  <li>Familiarity with natural language processing and/or machine learning. Ideal pre/co-requisites are CSCI 544 (Applied Natural Language Processing) or CSCI 567 (Machine Learning).</li>
+  <li>Programming skills. We will mainly use python with PyTorch, but you can use any other libraries for your final project.</li>
+</ul>
+
+<h2 id="schedule">Schedule</h2>
+<p>All assignments are due by <strong>11:59pm</strong> on the indicated date.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Week</th>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Related Readings</th>
+      <th>Assignments</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td> </td>
+      <td>Tue Aug 22</td>
+      <td>Introduction (<a href="assets/lectures/NLP_Ethics_1.pdf">slides</a>)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>Thu Aug 24</td>
+      <td>Bias Overview (<a href="assets/lectures/NLP_Ethics_2.pdf">slides</a>)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Tue Aug 29</td>
+      <td>Project Examples</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>Human Subjects Research</td>
+      <td><a href="https://aclanthology.org/D19-1107.pdf">Paper1</a>, <a href="https://aclanthology.org/2022.naacl-main.431.pdf">Paper2</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Aug 31</td>
+      <td>Social Biases in NLP</td>
+      <td><a href="https://proceedings.neurips.cc/paper_files/paper/2016/file/a486cd07e4ac3d270571622f4f316ec5-Paper.pdf">Paper1</a>, <a href="https://dl.acm.org/doi/10.1145/3287560.3287572">Paper2</a>, <a href="https://aclanthology.org/N19-1424.pdf">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Tue Sep 5</td>
+      <td>Bias Evaluation</td>
+      <td><a href="https://arxiv.org/pdf/2012.15859.pdf">Paper1</a>, <a href="https://proceedings.neurips.cc/paper/2020/hash/92650b2e92217715fe312e6fa7b90d82-Abstract.html">Paper2</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Sep 7</td>
+      <td>Models vs morality</td>
+      <td><a href="https://arxiv.org/abs/2110.07574">Paper1</a>, <a href="https://aclanthology.org/2021.naacl-main.297.pdf">Paper2</a>, <a href="https://arxiv.org/abs/2304.11111">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Tue Sep 12</td>
+      <td>Harms of LLMs in downstream tasks</td>
+      <td><a href="https://www.pnas.org/doi/10.1073/pnas.1702413114">Paper1</a>, <a href="https://arxiv.org/abs/2305.08283">Paper2</a>, <a href="https://dl.acm.org/doi/10.1145/3593013.3594094">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Sep 14</td>
+      <td>Bias Mitigation</td>
+      <td><a href="https://link.springer.com/content/pdf/10.1007/s10676-021-09583-1.pdf">Paper1</a>, <a href="https://arxiv.org/abs/2110.08527">Paper2</a></td>
+      <td>Project Proposal deadline</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Tue Sep 19</td>
+      <td>What happened in Industry Research (Sunipa Dev Guest Lecture)</td>
+      <td><a href="https://arxiv.org/abs/2210.15144">Paper1</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Sep 21</td>
+      <td>Harms of LLMs: Bias and Stereotype</td>
+      <td><a href="https://www.nature.com/articles/s42256-021-00359-2">Paper1</a>, <a href="https://aclanthology.org/2023.acl-long.244.pdf">Paper2</a>, <a href="https://arxiv.org/pdf/2302.07459.pdf">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Tue Sep 26</td>
+      <td>Hate Speech</td>
+      <td><a href="https://arxiv.org/pdf/2203.09509.pdf">Paper1</a>, <a href="https://aclanthology.org/2022.coling-1.579.pdf">Paper2</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>Bias &amp; Stereotype &amp; Harm summary</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Sep 28</td>
+      <td>Midterm Presentation Workshop</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Tue Oct 3</td>
+      <td>Midterm Presentation Workshop</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Oct 5</td>
+      <td>LLM memorization (Eric Wallace Guest Lecture)</td>
+      <td><a href="https://aclanthology.org/2022.acl-long.521.pdf">Paper1</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Tue Oct 10</td>
+      <td>Privacy</td>
+      <td><a href="https://aclanthology.org/2020.findings-emnlp.123.pdf">Paper1</a>, <a href="https://aclanthology.org/2021.naacl-main.298.pdf">Paper2</a>, <a href="https://aclanthology.org/2020.emnlp-main.532.pdf">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Oct 12</td>
+      <td>Fall Recess No Class</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Tue Oct 17</td>
+      <td>Human-Centered AI</td>
+      <td><a href="https://arxiv.org/abs/2202.04092">Paper1</a>, <a href="https://arxiv.org/pdf/2202.03286.pdf">Paper2</a>, <a href="http://users.umiacs.umd.edu/~hal/docs/daume22vqa.pdf">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Oct 19</td>
+      <td>Human&amp; AI Interaction (Weiyan Shi Guest Lecture)</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>Bias in Dialogue</td>
+      <td><a href="https://arxiv.org/abs/2307.04303">Paper1</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Tue Oct 24</td>
+      <td>Human-Centered AI (Sherry Wu Guest Lecture)</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>Microaggression</td>
+      <td><a href="https://aclanthology.org/D19-1176.pdf">Paper1</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Oct 26</td>
+      <td>Multilingual Biases</td>
+      <td><a href="https://aclanthology.org/2020.acl-main.260.pdf">Paper1</a>, <a href="https://aclanthology.org/2023.findings-acl.21.pdf">Paper2</a>, <a href="https://aclanthology.org/2022.naacl-main.52.pdf">Paper3</a></td>
+      <td>Midterm Report Due</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Tue Oct 31</td>
+      <td>Multimodal biases</td>
+      <td><a href="https://aclanthology.org/D17-1323/">Paper1</a>, <a href="https://arxiv.org/abs/2202.04053">Paper2</a>, <a href="https://arxiv.org/abs/2303.03323">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Nov 2</td>
+      <td>Reduce bias in language models</td>
+      <td><a href="https://arxiv.org/abs/2103.00453">Paper1</a>, <a href="https://aclanthology.org/2022.acl-long.72/">Paper2</a>, <a href="https://arxiv.org/pdf/2305.17013.pdf">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Tue Nov 7</td>
+      <td>Interpretation (Hanjie Chen Guest Lecture)</td>
+      <td><a href="https://arxiv.org/abs/2301.09656">Paper1</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Nov 9</td>
+      <td>Alignment with humans</td>
+      <td><a href="https://aclanthology.org/2021.blackboxnlp-1.1.pdf">Paper1</a>, <a href="https://arxiv.org/abs/2204.05862">Paper2</a>, <a href="https://arxiv.org/abs/2203.02155">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Tue Nov 14</td>
+      <td>Trade offs between different metrics</td>
+      <td><a href="https://aclanthology.org/2023.findings-acl.434.pdf">Paper1</a>, <a href="https://aclanthology.org/2023.findings-acl.280.pdf">Paper2</a>, <a href="https://arxiv.org/abs/2106.02705">Paper3</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Nov 16</td>
+      <td>Summary and Final Project Presentations</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Tue Nov 21</td>
+      <td>Final Project Presentations</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Nov 23</td>
+      <td>Thanksgiving (No Class)</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Tue Nov 28</td>
+      <td>Final Project Presentations</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Nov 30</td>
+      <td>Final Project Presentations</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Tue Dec 5</td>
+      <td>No Class</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Thu Dec 7</td>
+      <td>No Class</td>
+      <td> </td>
+      <td>Project Report Due</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="grading">Grading</h2>
+<p>Grades will be based on attendance (10%), paper presentation (30%), and a course project (60%).</p>
+
+<p><strong>Attendance and Discussion (10% total)</strong>:</p>
+<ul>
+  <li>In-Person Attendance</li>
+</ul>
+
+<p><strong>Paper Reading and Discussion (30% total)</strong>.</p>
+<ul>
+  <li>Present paper, lead class discussion</li>
+  <li>Signup as reviewers, peer review others’ presentation</li>
+</ul>
+
+<p><strong>Course Project (60% total)</strong>:</p>
+<ul>
+  <li>Project Proposal (10%)</li>
+  <li>Midterm Report (10%)</li>
+  <li>Final Presentation (20%)</li>
+  <li>Final Report (20%)</li>
+</ul>
+
+<h3 id="late-days">Late days</h3>
+<p>You have <strong>4 late days</strong> you may use on any assignment
+Each late day allows you to submit the assignment 24 hours later than the original deadline.
+If you are working in a group for the project, submitting the project proposal or midterm report one day late means that <strong>each member</strong> of the group spends a late day.</p>
+
+<h2 id="paper-presentation">Paper Presentation</h2>
+<p>Paper presentation will help students to develop the skills to give research talk to others.
+Each student will present 2 papers to the class. The student will prepare the slides for the paper and lead the discussion. 
+Each week, there will be another student signed up as the feedback provider (reviewer). The presenter should finish the rehearsal of their talk with the reviewer. The reviewer will finish a feedback form at least 2 days before the class. 
+Reviewer will provide the feedback to the presenter. The instructor will grade the presentation. Grading rubrics: correctness of the content (40%), clarity (20%), discussion (20%), slides &amp; presentation skills (20%).</p>
+
+<h2 id="final-project">Final Project</h2>
+<p>The final project can be done individually or in groups of up to 3.
+This is your chance to freely explore machine learning methods and how they can be applied to a task of our choice.
+You will also learn about best practices for developing machine learning methods—inspecting your data, establishing baselines, and analyzing your errors.</p>
+
+<p>Each student needs to individually finish one research project related to the class topics. There should be a “deliverable” result out of the project, meaning that your project should be self-complete and reproducible (scientifically correct. 
+A typical successful project could be: 1) a novel and sound solution to an interesting research problem, 2) correct and meaningful comparisons among baselines and existing approaches, 3) applying existing techniques to a new application. We will not penalize negative results, as long as your proposed approach is thoroughly explored and justified. 
+Overall, the project should showcase the student’s ability to think critically, conduct rigorous research, and apply the concepts learned in the course to address a relevant problem in the field of NLP ethics.</p>
+
+<p>Students should use the standard *ACL paper submission template to finish their writing report regarding the course project.</p>
+<ul>
+  <li>Project proposal (10%)
+Students are expected to finish a 2-page long project proposal by Week 5. The proposal should articulate the research question, justify the significance of the research, and provide evidence of the student’s knowledge and understanding of the research literature. A timeline for the project will be highly recommended to be included in the proposal.</li>
+  <li>Midterm progress report (10%)
+By Week 10, the students should finish a ~3-page progress report. The report should provide a clear statement about the research goal (could be different from the original one), a concise overview of the work completed so far, including any challenges encountered and solutions implemented and a report of some initial results.</li>
+  <li>Final presentation (20%)
+During the last two week, the students will make a 30-minute presentation about their project. It should include the research goal, the motivation, related work, their methodology and results. There will be a 5-minute QA session for other students to ask questions.</li>
+  <li>Final project report (20%)
+Students will write a final project report to describe the details about their research. The report should follow the NLP conference paper format, including the abstract, introduction, related work, result demonstration and discussion section. If the result is negative, it won’t be penalized but the students should highlight their analysis about what could be the possible reasons. The report should be in total 8 pages (excluding the reference).</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<p>The following courses are relevant:</p>
+<ul>
+  <li>UW: Linguistics 575: <a href="http://faculty.washington.edu/ebender/2017_575/">Ethics in NLP</a></li>
+  <li>Berkeley: CS 294: <a href="https://fairmlclass.github.io/">Fairness in Machine Learning</a></li>
+  <li>CMU: <a href="http://demo.clab.cs.cmu.edu/ethical_nlp2019/">Computational Ethics for NLP</a></li>
+</ul>
+
+
+    </div>
+    <script type="text/javascript">
+var schedule = document.getElementById("schedule-table");
+var tr_list = schedule.getElementsByTagName("tr");
+for (var i = 0; i < tr_list.length; i++) {
+  var tr = tr_list[i];
+
+  // Apply first column style
+  tr.children[0].classList.add('first-column');
+
+  // Apply styles hidden inside empty <a> elements
+  var inner_links = tr.getElementsByTagName("a");
+  for (var j = 0; j < inner_links.length; j++) {
+    var link = inner_links[j];
+    for (var k = 0; k < link.classList.length; k++) {
+      tr.classList.add(link.classList[k]);
+    }
+  }
+}
+    </script>
+  </body>
+</html>
